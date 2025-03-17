@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://hihc3xxkvr1w"]
+
+[ext_resource type="Script" uid="uid://qcs0xyjj7phw" path="res://ball_attack.gd" id="1_viar6"]
+[ext_resource type="Texture2D" uid="uid://c0y07nlyokevo" path="res://download__3_-removebg-preview (1).png" id="2_viar6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_viar6"]
+radius = 107.056
+
+[node name="Ball attack" type="Node2D"]
+script = ExtResource("1_viar6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7, 294.5)
+rotation = -3.07178
+scale = Vector2(0.737778, 0.688889)
+texture = ExtResource("2_viar6")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 300)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_viar6")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

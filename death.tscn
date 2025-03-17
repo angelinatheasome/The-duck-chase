@@ -1,0 +1,52 @@
+[gd_scene load_steps=3 format=3 uid="uid://bdnrymqgxmq1k"]
+
+[ext_resource type="Script" uid="uid://dhcvqxp4sh8r" path="res://death.gd" id="1_lf77f"]
+[ext_resource type="VideoStream" path="res://flower.ogv" id="1_qemge"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 7.0
+offset_top = 5.0
+offset_right = 7.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lf77f")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_qemge")
+autoplay = true
+expand = true
+loop = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 427.0
+offset_top = 252.0
+offset_right = 728.0
+offset_bottom = 333.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 53
+text = "You Died :3 "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 80.0
+offset_right = 910.0
+offset_bottom = 168.0
+theme_override_font_sizes/font_size = 41
+text = "Click to see evil ducks backstory"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

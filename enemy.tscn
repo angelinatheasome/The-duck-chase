@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dioksfonoip7e"]
+
+[ext_resource type="Script" uid="uid://d1k2r2vgopd53" path="res://enemy.gd" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://dor22kbs84ner" path="res://raf_360x360_075_t_fafafa_ca443f4786-removebg-preview (3).png" id="2_4gyqm"]
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+script = ExtResource("1_4gyqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 4.00001)
+scale = Vector2(0.638889, 0.677778)
+texture = ExtResource("2_4gyqm")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -126.0
+offset_top = -155.0
+offset_right = 147.0
+offset_bottom = -128.0
+value = 100.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-2, -75, 28, -71, 51, -50, 62, -12, 78, -1, 83, 15, 81, 27, 72, 27, 65, 17, 65, 39, 60, 58, 54, 63, 61, 67, 55, 71, 55, 79, 43, 78, 36, 84, 28, 78, 10, 82, -12, 80, -16, 90, -23, 82, -34, 87, -40, 76, -49, 74, -44, 69, -54, 52, -52, 42, -67, 43, -70, 30, -69, 9, -57, -10, -54, -34, -39, -55, -20, -69)
